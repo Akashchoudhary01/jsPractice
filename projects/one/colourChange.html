@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>colourChange</title>
+<style>
+      body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: gray;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        #btn {
+            display: flex;
+            gap: 20px;
+        }
+
+        .buttons {
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            border-radius: 10%;
+            cursor: pointer;
+        }
+
+        #blue { background-color: blue; }
+        #Green { background-color: green; }
+        #red { background-color: red; }
+        #Yellow { background-color: yellow; }
+    </style>
+
+
+</head>
+<body style="background-color: gray;">
+
+    <h1>Colour Switcher</h1>
+    <div id="btn">
+        <span class="buttons" id="blue"></span>
+        <span class="buttons" id="Green"></span>
+        <span class="buttons" id="red"></span>
+        <span class="buttons" id="Yellow"></span>
+    </div>
+    <h2>Click on any colour to change the background colour</h2>
+
+    <script src="./colourChange.js"></script>
+</body>
+</html>
