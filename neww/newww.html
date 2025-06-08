@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: rgba(221, 13, 124, 0.501)">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+
+    <script>
+
+         //Create element
+
+        function addLanguage(langName){
+           const li = document.createElement('li');
+           li.innerHTML = `${langName}`;
+           document.querySelector('.language').appendChild(li)
+        }
+        addLanguage('Python');
+        addLanguage('Java');
+        addLanguage('c++');
+        addLanguage('c');
+        
+        // Optial Method
+        function addOptLanguage(langNamee){
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(langNamee))
+            
+            document.querySelector('.language').appendChild(li)
+        }
+        addOptLanguage('tailwind CSS');
+        addOptLanguage('Django');
+        addOptLanguage('nodeJS');
+
+     // edit element
+
+     const edit = document.querySelector("li:nth-child(2)");
+     edit.innerHTML = "Express";
+
+     //remove element
+
+     const remove = document.querySelector("li:last-child");
+     const remove1 = document.querySelector("li:nth-child(3)");
+     remove.remove();
+     remove1.remove();
+
+
+        
+
+    </script>
+</body>
+</html>
