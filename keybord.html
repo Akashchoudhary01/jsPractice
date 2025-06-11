@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Key Event Display</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #ffffff);
+      transition: background-color 0.5s ease;
+    }
+
+    .main {
+      text-align: center;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 15px 20px;
+      border: 1px solid #ddd;
+      font-size: 1.2rem;
+    }
+
+    th {
+      background-color: #0077cc;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    td {
+      background-color: #f9f9f9;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main" id="main">
+    <h1>Press Any Key And See the Magic ✨</h1>
+  </div>
+
+  <script>
+    const main = document.getElementById('main');
+
+    window.addEventListener('keydown', (e) => {
+      main.innerHTML = `
+        <h1>Keyboard Event Captured</h1>
+        <table>
+          <tr>
+            <th>Key</th>
+            <th>KeyCode</th>
+            <th>Code</th>
+          </tr>
+          <tr>
+            <td>${e.key === ' ' ? 'Space' : e.key}</td>
+            <td>${e.keyCode}</td>
+            <td>${e.code}</td>
+          </tr>
+        </table>
+      `;
+    });
+  </script>
+</body>
+</html>
