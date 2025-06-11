@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic project with async</title>
+</head>
+
+<body style="height: 80vh ; justify-content:center;  display:flex; align-items:center">
+    <div class="main">
+        <h1 class="h1">Event Handling</h1>
+        <div style="margin-left: 30px;">
+
+            <button style="padding: 20px; border: 1px solid black; border-radius:20px" id="btn1">start</button>
+            <button style="padding: 20px; border: 1px solid black; border-radius:20px" id="btn2">stop</button>
+        </div>
+    </div>
+
+    <script>
+
+       let interval; // Declare globally so both functions can access it
+
+  document.querySelector('#btn1').addEventListener('click', function() {
+    const print = function(str) {
+      console.log(str, Date.now());
+    };
+
+    interval = setInterval(print, 3000, 'hii');
+  });
+
+  document.querySelector('#btn2').addEventListener('click', function() {
+    clearInterval(interval);
+    console.log('Event stopped');
+  });
+
+    </script>
+
+</body>
+
+</html>
