@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>basic project with async</title>
 </head>
+
 <body style="height: 80vh ; justify-content:center;  display:flex; align-items:center">
     <div class="main">
-        <h1>Hui hui hui</h1>
+        <h1 class="h1">Hui hui hui</h1>
         <button style="padding: 20px; border: 1px solid black; border-radius:20px" id="btn">submit</button>
     </div>
-    
+
+    <script>
+        //  <!-- set timeout -->
+        /*  const changeText = function(){
+              document.querySelector('.h1').innerHTML='Jai Shree ram';
+          }
+          const timeout = setTimeout(changeText , 3000)
+  
+        //  <!-- stop timeout -->
+  
+        document.querySelector('#btn').addEventListener('click' , function(){
+          clearTimeout(timeout);
+          console.log('Stopped')
+        })
+  */
+
+        //set inteval
+
+        const sayDate = function (str) {
+            console.log(str, Date.now());
+        }
+
+        const date = setInterval(sayDate, 2000, "Current time is:");
+
+
+        //stop Interval
+
+        document.querySelector('#btn').addEventListener('click' , function(){
+            clearInterval(date);
+            console.log('STOPPED');
+        })
+    </script>
 </body>
+
 </html>
