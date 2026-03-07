@@ -23,3 +23,29 @@ let ab =  abcd(function(){
 });
 
 console.log(ab);
+
+//what is closure ? when it is created
+
+function outer(){
+    let count = 0;
+  return  function inner (){
+        count++;
+        console.log(count);
+        
+    }
+    
+}
+const counter = outer();
+
+counter();
+
+
+//write a bmi calculator
+
+function BMI(weight ,  height){
+    return weight / (height * height);
+}
+console.log(BMI(65 , 1.7).toFixed(2));
+
+//write a discount calculator using HOF
+
