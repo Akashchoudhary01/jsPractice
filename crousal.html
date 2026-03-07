@@ -3,40 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crousal</title>
+    <title>Carousel</title>
 </head>
 <body>
     <div>
         <button id="green">Green</button>
         <button id="orange">Orange</button>
         <button id="randomColour">Random Colour</button>
+        <h1 class="h1" style="justify-content: center; display: flex; align-items: center;"></h1>
     </div>
     
     <script>
-
-        const rendomColor = function(){
-    const hex = "0123456789ABCDEF";
-    let color = '#';
-    for(let i=0; i<6; i++){
-        color += hex[Math.floor(Math.random()*16)]
-     }
-     return color;
-};
-
-        
-        function clickHandler(color){
-            return function(){
-
-                document.body.style.backgroundColor = `${color}`
+        const randomColor = function () {
+            const hex = "0123456789ABCDEF";
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += hex[Math.floor(Math.random() * 16)];
             }
-        }
-        document.getElementById('randomColour').addEventListener('click' , function(){
-             document.body.style.backgroundColor = rendomColor();
-        } )
-        document.getElementById('orange').addEventListener('click' , clickHandler('orange') )
-        document.getElementById('green').addEventListener('click' , clickHandler('green') )
-        
+            return color;
+        };
 
+        const h1 = document.querySelector('.h1');
+
+        function clickHandler(color) {
+            return function () {
+                document.body.style.backgroundColor = color;
+                h1.innerHTML = `Current Color: ${color}`;
+            };
+        }
+
+        document.getElementById('randomColour').addEventListener('click', function () {
+            const color = randomColor();
+            document.body.style.backgroundColor = color;
+            h1.innerHTML = `Current Color: ${color}`;
+        });
+
+        document.getElementById('orange').addEventListener('click', clickHandler('orange'));
+        document.getElementById('green').addEventListener('click', clickHandler('green'));
     </script>
 </body>
 </html>
