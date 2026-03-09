@@ -52,8 +52,16 @@
 let arr = [2 , 3 , 4 , 5 , 2 , 4]
 
 let ans = arr.forEach(function(val){
-   return  console.log(val+2);
+    return  console.log(val+2);
     
 })
 console.log(ans);
+
+//filter : filter() is an array method used to create a new array containing only the method that pass the condition
+let arrr = [2 , 3 , 4 , 5 , 32 , 41]
+let anss = arrr.filter(function(val){
+    return val > 5;
+})
+console.log(anss);
+
 
