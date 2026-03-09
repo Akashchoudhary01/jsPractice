@@ -97,8 +97,18 @@ console.log(entries);
 let obj1 = {
     name : " Demo",
     email : "demo@demo.com",
-    age : 1
+    age : 1,
+    address : {
+        lang : 345,
+        late : 444
+    }
+
 }
 
 let obj2 = {...obj1}
 console.log(obj2);
+
+
+//deep Cloning
+let obj3 = JSON.parse(JSON.stringify(obj1));
+console.log(obj3);
