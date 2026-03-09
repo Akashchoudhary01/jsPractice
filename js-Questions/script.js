@@ -83,6 +83,22 @@ for(let key in obj){
 let keys = Object.keys(obj);
 console.log(keys);
 
-//object.keys  = it create a new individual arrays for all the element of the object 
-let values = Object.entries(obj);
+
+//object.keys  = it create a new arrays with all the value of the object 
+let values = Object.values(obj);
 console.log(values);
+
+//object.keys  = it create a new individual arrays for all the element of the object 
+let entries = Object.entries(obj);
+console.log(entries);
+
+//spread : it create a referance copy of the object 
+
+let obj1 = {
+    name : " Demo",
+    email : "demo@demo.com",
+    age : 1
+}
+
+let obj2 = {...obj1}
+console.log(obj2);
