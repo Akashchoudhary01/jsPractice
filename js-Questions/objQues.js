@@ -5,3 +5,11 @@ let student = {
     Age : 22,
     isEnrolled : true
 }
+
+//use a variable to dynamic assign a prioperty
+let key = "Role";
+let obj = {
+    name : "Akash",
+    [key] : "Admin"
+}
+console.log(obj);
