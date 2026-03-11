@@ -4,3 +4,17 @@
 
 let h1 = document.querySelector("h1");
 h1.innerHTML = "Hello World"
+
+//get attribute , setAttribute , removeAttribute
+let a = document.querySelector("a");
+a.innerHTML= "google"
+a.setAttribute(
+    "href",
+    "https://www.google.com"
+)
+let h2 = document.createElement("h2");
+h2.innerHTML = "Jai Shree ram";
+h2.style.color = "orange";
+document.body.appendChild(h2);
+
+// document.body.prepend(h2); //
