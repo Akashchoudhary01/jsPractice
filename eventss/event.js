@@ -26,3 +26,12 @@ input.addEventListener("input" , function(inp){
     }
     
 })
+
+//change :- change event tab chalta hai jab hum select ya textarea me koi change krte hai 
+let hui = document.getElementById("hui");
+let select = document.querySelector("select");
+select.addEventListener("change" , function(val){
+    console.log(val.target.value);
+    hui.textContent = `${val.target.value} selected `
+    
+})
