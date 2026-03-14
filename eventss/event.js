@@ -49,18 +49,18 @@
     
 // })
 
-let btn = document.querySelector("#btn");
-let input = document.querySelector("#input");
-btn.addEventListener("click" , function(){
-    input.click();
-})
+// let btn = document.querySelector("#btn");
+// let input = document.querySelector("#input");
+// btn.addEventListener("click" , function(){
+//     input.click();
+// })
 
-input.addEventListener("click" , function(val){
-    const file = val.target.files[0]
-    if(file){
+// input.addEventListener("click" , function(val){
+//     const file = val.target.files[0]
+//     if(file){
 
-        btn.textContent = val.target.files[0].name
-    }
-    // console.log(val.target.files[0].name);
+//         btn.textContent = val.target.files[0].name
+//     }
+//     // console.log(val.target.files[0].name);
     
-})
+// })

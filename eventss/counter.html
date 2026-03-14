@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letter Counter</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#f2f2f2;
+}
+
+.container{
+    background:white;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    text-align:center;
+    width:300px;
+}
+
+h1{
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    font-size:16px;
+    border-radius:5px;
+    border:1px solid #ccc;
+    outline:none;
+}
+
+input:focus{
+    border-color:#4CAF50;
+}
+
+.result{
+    margin-top:20px;
+    font-size:20px;
+}
+
+span{
+    color:#4CAF50;
+    font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Letter Counter</h1>
+
+<input type="text" id="input" placeholder="Type something...">
+
+<p class="result"><span id="count">50</span> Character left</p>
+
+</div>
+
+<script src="./counter.js"></script>
+
+</body>
+</html>
