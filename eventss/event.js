@@ -36,15 +36,31 @@
     
 // })
 
-let h1 = document.getElementById("h1");
+// let h1 = document.getElementById("h1");
 
-window.addEventListener("keydown" , function(key){
-    console.log(key.key);
-    if(key.key === " "){
-        h1.textContent = "SPC"
-    }else{
-        h1.textContent = key.key
+// window.addEventListener("keydown" , function(key){
+//     console.log(key.key);
+//     if(key.key === " "){
+//         h1.textContent = "SPC"
+//     }else{
+//         h1.textContent = key.key
 
+//     }
+    
+// })
+
+let btn = document.querySelector("#btn");
+let input = document.querySelector("#input");
+btn.addEventListener("click" , function(){
+    input.click();
+})
+
+input.addEventListener("click" , function(val){
+    const file = val.target.files[0]
+    if(file){
+
+        btn.textContent = val.target.files[0].name
     }
+    // console.log(val.target.files[0].name);
     
 })

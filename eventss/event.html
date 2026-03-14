@@ -18,14 +18,23 @@
             justify-content: center;
             align-items: center;
             font-family: 'Segoe UI';
-            background: #6969;
+            background: rgba(38, 39, 38, 0.6);
 
         }
-        #h1{
-            font-size: 8rem;
-            font-weight: lighter;
-            
+        #input{
+            display: none;
         }
+        #btn{
+           
+            padding: 20px 45px;
+            font-size: 3rem;
+            color: white;
+            border: 1px black;
+            border-radius: 5px;
+            background-color: rgba(55, 119, 55, 0.6);
+        }
+
+        
     </style>
 </head>
 
@@ -43,7 +52,11 @@
     </select> -->
     <div id="main">
 
-        <h1 id="h1">Hello</h1>
+        <!-- <h1 id="h1">Hello</h1> -->
+         <input id="input" type="file" >
+         <button id="btn">
+            submit
+         </button>
     </div>
     <script src="./event.js"></script>
 </body>
