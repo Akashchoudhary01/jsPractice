@@ -14,3 +14,15 @@ let p = document.querySelector("p");
 p.addEventListener("dblclick" , function(){
    p.style.color = "red"
 })
+
+
+//input
+let input = document.createElement("input");
+document.body.appendChild(input);
+input.addEventListener("input" , function(inp){
+    if(inp.data !==null){
+
+        console.log(inp.data);
+    }
+    
+})
