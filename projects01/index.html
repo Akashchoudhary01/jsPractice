@@ -1,120 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         /* Reset */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-/* Body */
-body{
-    background: #f4f6f9;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding: 30px;
-}
+        /* Body */
+        body {
+            background: #f4f6f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
 
-/* Main container */
-body > div{
-    width: 100%;
-    max-width: 800px;
-}
+        /* Search input (if you add later) */
+        input {
+            width: 100%;
+            max-width: 600px;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: none;
+            outline: none;
+            border-radius: 8px;
+            font-size: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
 
-/* Search box */
-input{
-    width: 100%;
-    padding: 12px 15px;
-    border-radius: 8px;
-    border: none;
-    outline: none;
-    margin-bottom: 20px;
-    font-size: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
+        /* Cards container (IMPORTANT for layout) */
+        .container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
 
-/* Card container */
-.card{
-    display: flex;
-    max-width: 400px;
-    gap: 15px;
-    background: #fff;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: 0.3s ease;
-}
+        /* Card */
+        .card {
+            display: flex;
+            margin-top: 20px;
+            max-width: 400px;
+            gap: 15px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+        .h2{
+            font-size: 22px;
+            color: red;
+        }
 
-/* Hover effect */
-.card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
+        /* Hover effect */
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+        }
 
-/* Image */
-.card img{
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    object-fit: cover;
-    background: #ddd;
-}
+        /* Image */
+        .card img {
+            width: 90px;
+            height: 90px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
 
-/* Content */
-.contect{
-    flex: 1;
-}
+        /* Content */
+        .content {
+            flex: 1;
+        }
 
-.contect h3{
-    margin-bottom: 8px;
-    color: #333;
-}
+        .content h1 {
+            font-size: 18px;
+            margin-bottom: 6px;
+            color: #333;
+        }
 
-.contect p{
-    font-size: 14px;
-    color: #666;
-    line-height: 1.5;
-}
+        .content p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.4;
+        }
 
-/* Responsive */
-@media(max-width: 600px){
-    .card{
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+        /* Responsive */
+        @media(max-width: 600px) {
+            .card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
 
-    .card img{
-        width: 80px;
-        height: 80px;
-    }
-}
+            .card img {
+                width: 80px;
+                height: 80px;
+            }
+        }
     </style>
 </head>
-<body>
-    <div>
 
-        <input type="text" placeholder="search...">
-        <div>
-            <div class="card">
-                <img src="" alt="">
-                <div class="content">
-                    <h3>UserName</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae officia non eum repellat ea voluptates porro commodi sunt harum rem nostrum dolorem sapiente eveniet, laudantium praesentium? Error ad eius veritatis!</p>
-                </div>
-            </div>
-        </div>
+<body>
+    <input type="text"  placeholder="search..">
+    <h2 class="h2"></h2>
+    <div class="container">
+
     </div>
 
     <script src="./script.js"></script>
-    
+
 </body>
+
 </html>
