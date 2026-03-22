@@ -27,3 +27,21 @@ getProfile("Akash" , function(data){
     
 })
     */
+
+//
+//promish
+//
+
+let pr = new Promise(function (res, rej) {
+  setTimeout(() => {
+    let RN = Math.floor(Math.random() * 10);
+    if (RN > 5) res("Resolved with " + RN);
+    else rej("Rejected with" + RN);
+  }, 3000);
+});
+
+pr.then(function (val) {
+  console.log(val);
+}).catch(function (val) {
+  console.log(val);
+});
