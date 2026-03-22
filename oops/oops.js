@@ -66,7 +66,8 @@ class User{
     }
     write(text){
         let h1 = document.createElement("h1");
-        h1.textContent = text
+        h1.textContent = text;
+        document.body.appendChild(h1);
     }
 }
 
@@ -85,5 +86,5 @@ class Admin extends User{
 }
 
 let u1 = new User("Akash" , "Ranchi" , 22 , "akashkrchoudhary007@gmail.com");
-let u2 = new User("Juhi" , "Ranchi" , 19 , "juhiakashchoudhary@gmail.com");
+let u2 = new User("Juhi" , "Ranchi" , 19 , "juhipanday@gmail.com");
 let Ai = new Admin("luck" , "earth" , 69 , "s@s.s");
